@@ -39,7 +39,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: jdbc-connector
-
+```
 ### Service for JDBC connector pod
 Note: map the outside db IP/host into k8s service, refer to jdbc-connector-service.yaml
 ```
