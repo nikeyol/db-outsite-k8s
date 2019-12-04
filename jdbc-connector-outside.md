@@ -87,3 +87,4 @@ spec:
         configMap:
           name: jdbc-connector
           
+```
