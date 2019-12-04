@@ -10,11 +10,11 @@ FROM openjdk:8-jre-alpine
 COPY ./build/*.jar  /app.jar
 # run application with this command line
 CMD ["/usr/bin/java", "-jar", "/app.jar"]
-
+```
 ### build Dockerfile
 ```
 docker build -t jdbc-connector:0.1 .
-
+```
 ## Prepare the k8s Configuration
 ### ConfigMap for JDBC connector pod
 Note: refer to jdbc-connector-configmap.yaml and modify the property as need.
@@ -31,7 +31,7 @@ data:
     authToken=m6vXhyC6DfBgF7TlRZsSjWOz-7wCSbITde1L-HCFh7E=
     sources=jdbc:mysql://outside-db:3306/db
     targetServer=https://dev.vantiq.cn/
-
+```
 ### ServiceAccount for JDBC connector pod
 Note: refer to jdbc-connector-serviceaccount.yaml
 ```
