@@ -51,8 +51,8 @@ spec:
   type: ExternalName
   externalName: a.b.com
 
- ### StatefulSet for JDBC Connector
- Note: refer to jdbc-connector-statefulset.yaml
+### StatefulSet for JDBC Connector
+Note: refer to jdbc-connector-statefulset.yaml
 ```
 kind: StatefulSet
 metadata:
