@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-connector
+  labels:
+    app: db-connector
+    env: prod
+data:
+  server.config: |
+    authToken=m6vXhyC6DfBgF7TlRZsSjWOz-7wCSbITde1L-HCFh7E=
+    sources=jdbc:mysql://outside-db:3306/db
+    targetServer=https://dev.vantiq.cn/    

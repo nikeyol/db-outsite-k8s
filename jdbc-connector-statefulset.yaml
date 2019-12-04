@@ -1,0 +1,32 @@
+kind: StatefulSet
+metadata:
+  name: jdbc-connector
+spec:
+  selector:
+    matchLabels:
+      app: jdbc-connector
+      env: prod
+  serviceName: jdbc-connector
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jdbc-connector
+        env: prod
+    spec:
+      serviceAccountName: jdbc-connector
+      containers:
+      - name: jdbc-connector
+        image: jdbc-connector:0.1
+        env:
+        volumeMounts:
+        - name: server.conf
+          mountPath: /data/config/
+        resources:
+          requests:
+            cpu: 500m
+            memory: 1Gi
+      volumes:
+      - name: server.conf
+        configMap:
+          name: jdbc-connector

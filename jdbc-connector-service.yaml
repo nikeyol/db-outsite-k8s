@@ -1,0 +1,7 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: outside-db
+spec:
+  type: ExternalName
+  externalName: a.b.com
