@@ -86,4 +86,4 @@ spec:
       - name: server.conf
         configMap:
           name: jdbc-connector
-          
+```          
