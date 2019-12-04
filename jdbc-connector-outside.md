@@ -31,7 +31,7 @@ data:
     authToken=m6vXhyC6DfBgF7TlRZsSjWOz-7wCSbITde1L-HCFh7E=
     sources=jdbc:mysql://outside-db:3306/db
     targetServer=https://dev.vantiq.cn/
-
+```
 ### ServiceAccount for JDBC connector pod
 Note: refer to jdbc-connector-serviceaccount.yaml
 ```
@@ -50,7 +50,7 @@ metadata:
 spec:
   type: ExternalName
   externalName: a.b.com
-
+```
  ### StatefulSet for JDBC Connector
  Note: refer to jdbc-connector-statefulset.yaml
 ```
